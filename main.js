@@ -51,8 +51,8 @@ scene.add( line );
 //This is the animation loop
 function animate() {
 	requestAnimationFrame( animate ); //This is requesting a frame only when the page is active
-    
-    cube.rotation.x += 0.01; 
+
+    cube.rotation.x += 0.01;
     cube.rotation.y += 0.01;
 
 	renderer.render( scene, camera );
