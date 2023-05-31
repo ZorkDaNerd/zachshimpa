@@ -1,0 +1,6 @@
+canvas {
+  /* Making it fixed pos so it can be on behind of everything */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
