@@ -59,10 +59,17 @@ function animate() {
     renderer2.render( scene2, camera );
 }
 
-if ( WebGL.isWebGLAvailable() ) { //This is checking if WebGL is available
+function onWindowResize() {
+	camera.aspect = window.innerWidth / window.innerHeight;
+	camera.updateProjectionMatrix();
+	renderer.setSize( window.innerWidth, window.innerHeight );
+	renderer2.setSize( window.innerWidth, window.innerHeight );
+}
+window.addEventListener( 'resize', onWindowResize, false ); //This is adding an event listener to the window to resize the renderer
 
+if ( WebGL.isWebGLAvailable() ) { //This is checking if WebGL is available
 	// Initiate function or other initializations here
-	animate();
+	animate(); //This is calling the animation loop
 
 } else {
 
