@@ -48,7 +48,7 @@ Array(200).fill().forEach(addStar); // Creates 200 stars
 
 // Avatar
 
-const zachTexture = new THREE.TextureLoader().load('.//assets//images//ZorkDaBork.png'); // Loads the zach texture
+const zachTexture = new THREE.TextureLoader().load('/images/ZorkDaBork.png'); // Loads the zach texture
 
 const zach = new THREE.Mesh(
   new THREE.BoxGeometry(3, 3, 3), // Creates a box
@@ -62,8 +62,8 @@ zach.position.x = 2;
 
 // Pluto
 
-const plutoTexture = new THREE.TextureLoader().load('.//assets//images//Pluto_Made.jpg'); // Loads the moon texture
-const plutoNormal = new THREE.TextureLoader().load('.//assets//images//Pluto_Normal.jpg'); // Loads the moon normal texture
+const plutoTexture = new THREE.TextureLoader().load('/images/Pluto_Made.jpg'); // Loads the moon texture
+const plutoNormal = new THREE.TextureLoader().load('/images/Pluto_Normal.jpg'); // Loads the moon normal texture
 
 const pluto = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32), // Creates a sphere
@@ -80,7 +80,7 @@ pluto.position.setX(-10); // Sets the position of the moon
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load('.//assets//images//pexels-jeremy-müller-6444367.jpg'); // Loads the space texture
+const spaceTexture = new THREE.TextureLoader().load('/images/pexels-jeremy-müller-6444367.jpg'); // Loads the space texture
 scene.background = spaceTexture; // Sets the background to the space texture
 // Lights
 
