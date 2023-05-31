@@ -17,7 +17,8 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setPixelRatio(window.devicePixelRatio); // Makes it look better
 renderer.setSize(window.innerWidth, window.innerHeight); // Makes it a full screen size
-camera.position.setZ(30); // Moves the camera back 30 units
+// camera.position.setZ(30); // Moves the camera back 30 units
+// camera.position.setX(-3);
 
 renderer.render(scene, camera);
 
@@ -56,18 +57,26 @@ const zach = new THREE.Mesh(
 
 scene.add(zach); // Adds the zach to the scene
 
-// Moon
+zach.position.z = -5;
+zach.position.x = 2;
 
-const moonTexture = new THREE.TextureLoader().load('.//assets//images//Pluto_Made.jpg'); // Loads the moon texture
+// Pluto
 
-const moon = new THREE.Mesh(
+const plutoTexture = new THREE.TextureLoader().load('.//assets//images//Pluto_Made.jpg'); // Loads the moon texture
+const plutoNormal = new THREE.TextureLoader().load('.//assets//images//Pluto_Normal.jpg'); // Loads the moon normal texture
+
+const pluto = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32), // Creates a sphere
-  new THREE.MeshStandardMaterial({ map: moonTexture }) // Creates a material
+  new THREE.MeshStandardMaterial({
+    map: plutoTexture, // Adds the texture to the material
+    normalMap: plutoNormal // Adds the normal map to the material
+  }) // Creates a material
 );
 
-scene.add(moon); // Adds the moon to the scene
+scene.add(pluto); // Adds the moon to the scene
 
-
+pluto.position.z = 30; // Sets the position of the moon
+pluto.position.setX(-10); // Sets the position of the moon
 
 // Background
 
@@ -81,14 +90,33 @@ pointLight.position.set(5, 5, 5); // Sets the position of the point light
 const ambientLight = new THREE.AmbientLight(0xffffff); // Creates an ambient light
 scene.add(pointLight, ambientLight); // Adds the point light and the ambient light to the scene
 
-const lightHelper = new THREE.PointLightHelper(pointLight) // Creates a light helper
-const gridHelper = new THREE.GridHelper(200, 50); // Creates a grid helper
-scene.add(lightHelper, gridHelper) // Adds the light helper to the scene
+// const lightHelper = new THREE.PointLightHelper(pointLight) // Creates a light helper
+// const gridHelper = new THREE.GridHelper(200, 50); // Creates a grid helper
+// scene.add(lightHelper, gridHelper) // Adds the light helper to the scene
 
 
 
 // Controls
-const controls = new OrbitControls(camera, renderer.domElement); // Creates controls
+// const controls = new OrbitControls(camera, renderer.domElement); // Creates controls
+
+// Move Camera
+
+function moveCamera() {
+
+  const t = document.body.getBoundingClientRect().top; // Gets the top of the body
+  pluto.rotation.x += 0.05; // Rotates the moon x
+  pluto.rotation.y += 0.075; // Rotates the moon y
+  pluto.rotation.z += 0.05; // Rotates the moon z
+
+  zach.rotation.y += 0.01; // Rotates zach y
+  zach.rotation.z += 0.01; // Rotates zach z
+
+  camera.position.z = t * -0.01; // Moves the camera back z
+  camera.position.x = t * -0.0002; // Moves the camera left x
+  camera.rotation.y = t * -0.0002; // Rotates the camera left y
+}
+
+document.body.onscroll = moveCamera; // Moves the camera when the body is scrolled
 
 // Animation
 
@@ -99,7 +127,9 @@ function animate() { // Kinda like a game loop
   torus.rotation.y += 0.005; // Rotates the torus
   torus.rotation.z += 0.01; // Rotates the torus
 
-  controls.update(); // Updates the controls
+  pluto.rotation.x += 0.005; // Rotates the moon x
+
+  // controls.update(); // Updates the controls
 
   renderer.render(scene, camera); // Renders the scene and the camera
 }
