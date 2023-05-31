@@ -1,15 +1,17 @@
 {
-  "name": "three-demo",
+  "name": "zacharyshimpa",
+  "private": true,
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^2.3.0"
+    "vite": "^4.3.9"
   },
   "dependencies": {
-    "three": "^0.128.0"
+    "three": "^0.152.2"
   }
 }
