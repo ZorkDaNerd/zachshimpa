@@ -45,6 +45,34 @@ scene.add(star); // Adds the star to the scene
 
 Array(200).fill().forEach(addStar); // Creates 200 stars
 
+// Avatar
+
+const zachTexture = new THREE.TextureLoader().load('.//assets//images//ZorkDaBork.png'); // Loads the zach texture
+
+const zach = new THREE.Mesh(
+  new THREE.BoxGeometry(3, 3, 3), // Creates a box
+  new THREE.MeshBasicMaterial({ map: zachTexture }) // Creates a material
+);
+
+scene.add(zach); // Adds the zach to the scene
+
+// Moon
+
+const moonTexture = new THREE.TextureLoader().load('.//assets//images//Pluto_Made.jpg'); // Loads the moon texture
+
+const moon = new THREE.Mesh(
+  new THREE.SphereGeometry(3, 32, 32), // Creates a sphere
+  new THREE.MeshStandardMaterial({ map: moonTexture }) // Creates a material
+);
+
+scene.add(moon); // Adds the moon to the scene
+
+
+
+// Background
+
+const spaceTexture = new THREE.TextureLoader().load('.//assets//images//pexels-jeremy-müller-6444367.jpg'); // Loads the space texture
+scene.background = spaceTexture; // Sets the background to the space texture
 // Lights
 
 const pointLight = new THREE.PointLight(0xffffff); // Creates a point light
@@ -75,7 +103,6 @@ function animate() { // Kinda like a game loop
 
   renderer.render(scene, camera); // Renders the scene and the camera
 }
-
 
 // Reload
 function onWindowResize() { // Resizes the window
