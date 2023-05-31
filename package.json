@@ -1,6 +1,6 @@
 {
   "name": "zacharyshimpa",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -15,6 +15,7 @@
     "vite": "^4.3.9"
   },
   "dependencies": {
+    "gh-pages": "^5.0.0",
     "three": "^0.152.2"
   }
 }
