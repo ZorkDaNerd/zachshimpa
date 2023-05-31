@@ -2,6 +2,7 @@ import './style.css'
 
 import * as THREE from 'three';
 import WebGL from 'three/addons/capabilities/WebGL.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 const scene = new THREE.Scene();
 
@@ -23,15 +24,55 @@ renderer.render(scene, camera);
 // Torus
 
 const geometry = new THREE.TorusGeometry(10, 3, 16, 100); // Creates a torus
-// MeshBasicMaterial doesn't need a light source
-const material = new THREE.MeshBasicMaterial({ color: 0x00FF00, wireframe: true}); // Creates a material
+// MeshBasicMaterial doesn't need a light source, MeshStandardMaterial does
+const material = new THREE.MeshStandardMaterial({ color: 0x00FF00}); // Creates a material
 const torus = new THREE.Mesh(geometry, material); // Creates a mesh
 
 scene.add(torus) // Adds the torus to the scene
 
+// Stars
+
+function addStar() {
+const geometry = new THREE.SphereGeometry(0.25, 24, 24); // Creates a sphere
+const material = new THREE.MeshStandardMaterial({ color: 0xffffff }); // Creates a material
+const star = new THREE.Mesh(geometry, material); // Creates a mesh
+
+const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(100)); // Creates an array of 3 random numbers
+
+star.position.set(x, y, z); // Sets the position of the star
+scene.add(star); // Adds the star to the scene
+}
+
+Array(200).fill().forEach(addStar); // Creates 200 stars
+
+// Lights
+
+const pointLight = new THREE.PointLight(0xffffff); // Creates a point light
+pointLight.position.set(5, 5, 5); // Sets the position of the point light
+
+const ambientLight = new THREE.AmbientLight(0xffffff); // Creates an ambient light
+scene.add(pointLight, ambientLight); // Adds the point light and the ambient light to the scene
+
+const lightHelper = new THREE.PointLightHelper(pointLight) // Creates a light helper
+const gridHelper = new THREE.GridHelper(200, 50); // Creates a grid helper
+scene.add(lightHelper, gridHelper) // Adds the light helper to the scene
+
+
+
+// Controls
+const controls = new OrbitControls(camera, renderer.domElement); // Creates controls
+
 // Animation
+
 function animate() { // Kinda like a game loop
   requestAnimationFrame(animate); // Creates a loop
+
+  torus.rotation.x += 0.01; // Rotates the torus
+  torus.rotation.y += 0.005; // Rotates the torus
+  torus.rotation.z += 0.01; // Rotates the torus
+
+  controls.update(); // Updates the controls
+
   renderer.render(scene, camera); // Renders the scene and the camera
 }
 
