@@ -1,79 +1,130 @@
-//Required imports
+import './style.css';
 import * as THREE from 'three';
-import WebGL from 'three/addons/capabilities/WebGL.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-//Addons
-import { CSS3DRenderer } from 'three/addons/renderers/CSS3DRenderer.js';
-import { CSS2DRenderer } from 'three/addons/renderers/CSS2DRenderer.js';
-import {TrackballControls} from 'three/addons/controls/TrackballControls.js';
+// Setup
 
-//These are addons that I will be using later
-// import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-// import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+const scene = new THREE.Scene();
 
-// const controls = new OrbitControls( camera, renderer.domElement );
-// const loader = new GLTFLoader();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-//This is where the scene is being built
-const scene = new THREE.Scene(); //This is the scene
-const camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 500 ); //This is the camera with render falloff at the end
-camera.position.set( 0, 0, 100 );
-camera.lookAt( 0, 0, 0 );
+const renderer = new THREE.WebGLRenderer({
+  canvas: document.querySelector('#bg'),
+});
 
+renderer.setPixelRatio(window.devicePixelRatio);
+renderer.setSize(window.innerWidth, window.innerHeight);
+camera.position.setZ(30);
+camera.position.setX(-3);
 
-const renderer = new THREE.WebGLRenderer(); //This is the renderer
-renderer.setSize( window.innerWidth, window.innerHeight ); //This is the renderer size, it can be set to lower values to render at lower resolutions
-document.body.appendChild( renderer.domElement ); //This is the renderer element it displays to the scene
+renderer.render(scene, camera);
 
+// Torus
 
-//This is where the cube is being built
-const geometry = new THREE.SphereGeometry( 5, 5, 5 ); //This is the cube geometry, contains vertices and faces
-const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } ); //This is the cube material, it is what the cube is made of
-const cube = new THREE.Mesh( geometry, material );  //This is where the mesh is applied to the cube
-scene.add( cube ); //This is where the cube is added to the scene, it defaults to 0,0,0
+const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
+const material = new THREE.MeshStandardMaterial({ color: 0xff6347 });
+const torus = new THREE.Mesh(geometry, material);
 
+scene.add(torus);
 
-//This is where the line is being built
-const materialLine = new THREE.LineBasicMaterial( { color: 0x0000ff } );
-const points = []; //This is where the points are being stored for the line to run across
-points.push( new THREE.Vector3( - 10, 0, 0 ) );
-points.push( new THREE.Vector3( 0, 10, 0 ) );
-points.push( new THREE.Vector3( 10, 0, 0 ) );
-const geometryLine = new THREE.BufferGeometry().setFromPoints( points );
-const line = new THREE.Line( geometryLine, materialLine );
-scene.add( line );
+// Lights
 
+const pointLight = new THREE.PointLight(0xffffff);
+pointLight.position.set(5, 5, 5);
 
-//this is where the text is
+const ambientLight = new THREE.AmbientLight(0xffffff);
+scene.add(pointLight, ambientLight);
 
+// Helpers
 
+// const lightHelper = new THREE.PointLightHelper(pointLight)
+// const gridHelper = new THREE.GridHelper(200, 50);
+// scene.add(lightHelper, gridHelper)
 
-//This is the animation loop
+// const controls = new OrbitControls(camera, renderer.domElement);
+
+function addStar() {
+  const geometry = new THREE.SphereGeometry(0.25, 24, 24);
+  const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
+  const star = new THREE.Mesh(geometry, material);
+
+  const [x, y, z] = Array(3)
+    .fill()
+    .map(() => THREE.MathUtils.randFloatSpread(100));
+
+  star.position.set(x, y, z);
+  scene.add(star);
+}
+
+Array(200).fill().forEach(addStar);
+
+// Background
+
+const spaceTexture = new THREE.TextureLoader().load('space.jpg');
+scene.background = spaceTexture;
+
+// Avatar
+
+const jeffTexture = new THREE.TextureLoader().load('jeff.png');
+
+const jeff = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: jeffTexture }));
+
+scene.add(jeff);
+
+// Moon
+
+const moonTexture = new THREE.TextureLoader().load('moon.jpg');
+const normalTexture = new THREE.TextureLoader().load('normal.jpg');
+
+const moon = new THREE.Mesh(
+  new THREE.SphereGeometry(3, 32, 32),
+  new THREE.MeshStandardMaterial({
+    map: moonTexture,
+    normalMap: normalTexture,
+  })
+);
+
+scene.add(moon);
+
+moon.position.z = 30;
+moon.position.setX(-10);
+
+jeff.position.z = -5;
+jeff.position.x = 2;
+
+// Scroll Animation
+
+function moveCamera() {
+  const t = document.body.getBoundingClientRect().top;
+  moon.rotation.x += 0.05;
+  moon.rotation.y += 0.075;
+  moon.rotation.z += 0.05;
+
+  jeff.rotation.y += 0.01;
+  jeff.rotation.z += 0.01;
+
+  camera.position.z = t * -0.01;
+  camera.position.x = t * -0.0002;
+  camera.rotation.y = t * -0.0002;
+}
+
+document.body.onscroll = moveCamera;
+moveCamera();
+
+// Animation Loop
+
 function animate() {
-	requestAnimationFrame( animate ); //This is requesting a frame only when the page is active
+  requestAnimationFrame(animate);
 
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
+  torus.rotation.x += 0.01;
+  torus.rotation.y += 0.005;
+  torus.rotation.z += 0.01;
 
-	renderer.render( scene, camera );
-    renderer2.render( scene2, camera );
+  moon.rotation.x += 0.005;
+
+  // controls.update();
+
+  renderer.render(scene, camera);
 }
 
-function onWindowResize() {
-	camera.aspect = window.innerWidth / window.innerHeight;
-	camera.updateProjectionMatrix();
-	renderer.setSize( window.innerWidth, window.innerHeight );
-	renderer2.setSize( window.innerWidth, window.innerHeight );
-}
-window.addEventListener( 'resize', onWindowResize, false ); //This is adding an event listener to the window to resize the renderer
-
-if ( WebGL.isWebGLAvailable() ) { //This is checking if WebGL is available
-	// Initiate function or other initializations here
-	animate(); //This is calling the animation loop
-
-} else {
-
-	const warning = WebGL.getWebGLErrorMessage(); //This is the error message if WebGL is not available
-	document.getElementById( 'container' ).appendChild( warning );
-
-}
+animate();

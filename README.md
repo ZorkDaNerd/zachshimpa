@@ -1,12 +1,12 @@
-# zacharyshimpa
-Personal webpage to promote my projects!
+# Scrollable 3D Animation with Three.js
 
-https://www.youtube.com/watch?v=YK1Sw_hnm58
+- Watch the [full tutorial](https://youtu.be/Q7AOvWpIVHU) on YouTube
+- [Scrollable Three.js Animation](https://fireship.io/snippets/threejs-scrollbar-animation) Snippet
 
-https://www.youtube.com/watch?v=xJAfLdUgdc4&list=PLjcjAqAnHd1EIxV4FSZIiJZvsdrBc1Xho
+## Usage
 
-https://www.youtube.com/watch?v=Q7AOvWpIVHU
-
-https://www.youtube.com/watch?v=C8Cuwq1eqDw
-
-https://www.youtube.com/watch?v=k1zGz55EqfU
+```
+git clone <this-repo>
+npm install
+npm run dev
+```
