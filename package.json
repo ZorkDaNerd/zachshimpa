@@ -11,6 +11,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^6.8.0",
     "astro": "^2.10.7",
     "gh-pages": "^5.0.0"
   }
