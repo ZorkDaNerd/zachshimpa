@@ -1,5 +1,5 @@
 {
-  "name": "zachshimpa",
+  "name": "home-zorkdabork-repos-zachshimpa",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -7,12 +7,11 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "deploy": "gh-pages -d dist"
+    "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^6.8.0",
-    "astro": "^2.10.7",
-    "gh-pages": "^5.0.0"
+    "@astrojs/check": "^0.2.0",
+    "astro": "^3.2.2",
+    "typescript": "^5.2.2"
   }
 }
