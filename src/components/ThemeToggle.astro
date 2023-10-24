@@ -80,6 +80,17 @@ import Icon from './Icon.astro';
 				button.setAttribute('aria-pressed', String(dark));
 			};
 
+			// Check if the user's theme preference is stored in localStorage.
+			const userPreference = localStorage.getItem('theme');
+
+			if (userPreference === 'light') {
+				// User prefers the light theme.
+				setTheme(false); // Set the theme to light
+			} else {
+				// Default to dark theme for first-time visitors or those who prefer dark.
+				setTheme(true); // Set the theme to dark
+			}
+
 			// Toggle the theme when a user clicks the button.
 			button.addEventListener('click', () => setTheme(!this.isDark()));
 
