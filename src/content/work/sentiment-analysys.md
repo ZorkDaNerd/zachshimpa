@@ -1,14 +1,15 @@
 ---
-title: CS 314 Scrum Travel Website
-publishDate: 2019-10-02 00:00:00
-img: /assets/work/cs314/cs314-Trip-Finder.png
-img_alt: Image of the user interface made for the trip finder website.
+title: Text recognition and Sentiment Analysis
+publishDate: 2019-12-01 00:00:00
+img: /assets/stock-2.jpg
+img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
 description: |
-  We developed a trip finder/creator website. This class had this done in a group setting with scrums and product managers.
+  We paired with a cutting-edge music API and a team of horticulturalists
+  to build AI-generated playlists that maximize houseplant health.
 tags:
-  - Design
-  - Software Engineering
-  - Full Stack
+  - Neural Network
+  - Training
+  - Dataset
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere commodo venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam non ligula vel metus efficitur hendrerit. In hac habitasse platea dictumst. Praesent et mauris ut mi dapibus semper. Curabitur tortor justo, efficitur sit amet pretium cursus, porta eget odio. Cras ac venenatis dolor. Donec laoreet posuere malesuada. Curabitur nec mi tempor, placerat leo sit amet, tincidunt est. Quisque pellentesque venenatis magna, eget tristique nibh pulvinar in. Vestibulum vitae volutpat arcu. Aenean ut malesuada odio, sit amet pellentesque odio. Suspendisse nunc elit, blandit nec hendrerit non, aliquet at magna. Donec id leo ut nulla sagittis sodales.
