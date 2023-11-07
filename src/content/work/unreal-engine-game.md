@@ -1,17 +1,18 @@
 ---
-title: Markdown Mystery Tour
+title: Unreal Engine 5.1 VR Game
 publishDate: 2020-03-02 00:00:00
-img: /assets/stock-1.jpg
-img_alt: Iridescent ripples of a bright blue and pink liquid
+img: /assets/work/Unreal-VR-Game.png
+img_alt: Image of the VR Unreal Game
+
 description: |
-  We designed a whodunnit-style game to introduce Markdown formatting. Suspense — suspicion — syntax!
+  We made a Unreal Engine 5.1 VR Game using the new blueprint coding system. It was made for a class and achieved one of the highest grades in the class.
 tags:
-  - Design
-  - Dev
-  - User Testing
+  - Game Design
+  - Testing
+  - Blueprint
 ---
 
-## Level-two heading
+## How it was made
 
 > Tell me and I forget. Teach me and I remember. Involve me and I learn.
 
@@ -19,7 +20,7 @@ Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes peopl
 
 Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel quam elementum pulvinar etiam non.
 
-### Level-three heading
+### Demo and explanation videos
 
 Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra. Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl pretium fusce.
 
