@@ -1,30 +1,43 @@
-# Astro Starter Kit: Portfolio
 
-```sh
-npm create astro@latest -- --template portfolio
-```
+# Zachary Shimpa's Personal Website
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/portfolio)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/portfolio)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/portfolio/devcontainer.json)
+## Description
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+This is the source code for my personal website. Here, you can learn more about me, my portfolio, and how to get in touch!
 
-![portfolio](https://user-images.githubusercontent.com/357379/210779178-a98f0fb7-6b1a-4068-894c-8e1403e26654.jpg)
+## Features
 
-## 🧞 Commands
+- About Me: Learn more about me and my background.
+- Portfolio: Check out some of the projects I've worked on.
+- Blog: Read some of my thoughts on various topics.
+- Contact: Find out how to get in touch with me.
 
-All commands are run from the root of the project, from a terminal:
+## Installation
 
-| Command                   | Action                                           |
+To run the website locally:
+
+1. Clone the repository
+2. `cd` into the repository
+3. Run `npm install` to install dependencies
+4. Run `npm start` to start the local server
+
+## Contributing
+
+While this is a personal website, if you find any bugs or areas for improvement, feel free to open an issue or submit a pull request.
+This websites framework and template are based off of one provided by [Astro](https://github.com/withastro)
+
+## License
+
+This project is open source, under the [MIT License](LICENSE).
+
+## Contact
+
+If you want to contact me you can reach me at <zshimpa.404@gmail.com>.
+<!-- | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
 | `npm install`             | Installs dependencies                            |
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
 | `npm run build`           | Build your production site to `./dist/`          |
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| `npm run astro -- --help` | Get help using the Astro CLI                     | -->
