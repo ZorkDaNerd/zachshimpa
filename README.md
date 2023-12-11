@@ -26,9 +26,9 @@ To run the website locally:
 While this is a personal website, if you find any bugs or areas for improvement, feel free to open an issue or submit a pull request.
 This websites framework and template are based off of one provided by [Astro](https://github.com/withastro)
 
-## License
+<!-- ## License
 
-This project is open source, under the [MIT License](LICENSE).
+This project is open source, under the [MIT License](LICENSE). -->
 
 ## Contact
 
