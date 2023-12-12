@@ -29,7 +29,8 @@ tags:
 
 - We noted this
 - And also this other point -->
-
+<P
+  style="font-size:20px;"
+>
 The 'FA22-GoldsteinN_ShimpaZ' repository houses our project, an Unreal Engine 5.1 VR Game. This game was developed using the new blueprint coding system and was created as part of a class assignment. It achieved one of the highest grades in the class, demonstrating our proficiency in game design, testing, and blueprint coding. The repository includes assets, code, and documentation related to the game.
-
-## WIP
+</p>
