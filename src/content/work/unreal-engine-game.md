@@ -2,7 +2,6 @@
 title: Unreal Engine 5.1 VR Game
 publishDate: 2020-03-02 00:00:00
 img: /assets/work/unreal-VR/unreal-VR-Game.png
-# <img src="/assets/work/unreal-VR/unreal-VR-Game.png" width="1890" height="906">
 img_alt: Image of the VR Unreal Game
 
 description: |
@@ -12,12 +11,7 @@ tags:
   - Testing
   - Blueprint
 ---
-<img
-  src="/assets/work/unreal-VR/unreal-VR-Game.png"
-  width="600"
-  height="400"
-  alt="Image of the VR Unreal Game"
->
+<!-- <img src="/assets/work/unreal-VR/unreal-VR-Game.png" width="600" height="400" alt="Image of the VR Unreal Game"> -->
 
 <!-- ## How it was made -->
 
