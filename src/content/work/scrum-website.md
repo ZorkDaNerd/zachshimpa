@@ -10,7 +10,7 @@ tags:
   - Software Engineering
   - Full Stack
 ---
-
+CSU-CS-314-Fall-2022/t21 is a repository dedicated to the development of a Scrum Travel Website, a trip finder/creator platform. This project was developed in a group setting, utilizing scrum methodologies and product management practices. The repository showcases our skills in Design, Software Engineering, and Full Stack development. The user interface of the website is intuitive and user-friendly, as depicted in the repository's assets. This project is currently a work in progress (WIP), and we are actively working on enhancing its features and functionalities
 
 
 ## WIP
