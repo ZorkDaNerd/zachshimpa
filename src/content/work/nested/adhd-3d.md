@@ -20,5 +20,5 @@ tags:
 > -->
 <P
   style="font-size:20px;"
-> The repository 'SP23-The-Effects-Of-Different-Navigation-Techniques-On-Distractability-of-ADHD-And-Non-ADHD-Individual', is dedicated to our research on how different navigation techniques affect the distractibility of individuals with and without ADHD in a virtual reality (VR) environment. We have developed a virtual showcase for the softest bedding imaginable as a test environment. The project aims to assist people with ADHD in navigating VR and to understand the impact of VR navigation techniques on their distractibility. The research areas covered in this project include Virtual Reality, Navigation, and ADHD.
+> The repository 'SP23-The-Effects-Of-Different-Navigation-Techniques-On-Distractability-of-ADHD-And-Non-ADHD-Individual', is dedicated to our research on how different navigation techniques affect the distractibility of individuals with and without ADHD in a virtual reality (VR) environment. We have developed a virtual showcase for the test environment. The project aims to assist people with ADHD in navigating VR and to understand the impact of VR navigation techniques on their distractibility. The research areas covered in this project include Virtual Reality, Navigation, and ADHD.
 </p>
