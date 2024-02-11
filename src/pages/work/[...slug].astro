@@ -36,12 +36,15 @@ const { Content } = await entry.render();
 					<Hero title={entry.data.title} align="start">
 						<div class="details">
 							<div class="tags">
-								{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
+								{entry.data.tags.map((t: string, index: string) => (
+									<a href={`${entry.data.tags_links?.[index] ?? ''}`} target="_blank" rel="noopener noreferrer">
+										<Pill>{t}</Pill>
+									</a>))}
 							</div>
 							<div class="github_repo">
 								<a href={`${entry.data.github_repo}`} target="_blank" rel="noopener noreferrer">
-									<Icon icon="terminal-window" />
-									<span>View on GitHub</span>
+									<!-- <Icon icon="terminal-window" /> -->
+									<Pill>View on GitHub</Pill>
 								</a>
 							</div>
 							<p class="description">{entry.data.description}</p>
@@ -68,6 +71,16 @@ const { Content } = await entry.render();
 		border-bottom: 1px solid var(--gray-800);
 	}
 
+	.github_repo a {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		text-decoration: none; /* This applies to all states of the link */
+		.pill {
+			background: green;
+		}
+	}
+
 	.back-link {
 		display: none;
 	}
@@ -81,9 +94,24 @@ const { Content } = await entry.render();
 		align-items: center;
 	}
 
-	.tags {
+	.tags a{
+		display: flex;
+		align-items: ;
+		gap: 0.5rem;
+		text-decoration: none;
+	}
+
+	.github_repo, .tags {
 		display: flex;
 		gap: 0.5rem;
+	}
+
+	.github_repo a, .tags a {
+		text-decoration: none;
+	}
+
+	.github_repo a:hover, .tags a:hover {
+		text-decoration: none;
 	}
 
 	.description {

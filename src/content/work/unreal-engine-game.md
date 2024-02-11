@@ -7,10 +7,16 @@ github_repo: https://github.com/csu-hci-projects/FA22-GoldsteinN_ShimpaZ
 
 description: |
   We made a Unreal Engine 5.1 VR Game using the new blueprint coding system. It was made for a class and achieved one of the highest grades in the class.
+
 tags:
   - Game Design
-  - Testing
-  - Blueprint
+  - Game Testing
+  - Unreal Blueprint
+
+tags_links:
+  - https://en.wikipedia.org/wiki/Game_design
+  - https://en.wikipedia.org/wiki/Game_testing
+  - https://docs.unrealengine.com/5.0/en-US/blueprints-visual-scripting-in-unreal-engine/
 ---
 <!-- <img src="/assets/work/unreal-VR/unreal-VR-Game.png" width="600" height="400" alt="Image of the VR Unreal Game"> -->
 

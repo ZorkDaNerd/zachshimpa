@@ -3,12 +3,19 @@ title: Scrum Travel Website
 publishDate: 2019-10-02 00:00:00
 img: /assets/work/scrum-trip/cs314-Trip-Finder.png
 img_alt: User interface made for the trip finder website.
+github_repo: https://github.com/CSU-CS-314-Fall-2022/t21
 description: |
   We developed a trip finder/creator website. This class had this done in a group setting with scrums and product managers.
+
 tags:
-  - Design
+  - Product Design
   - Software Engineering
   - Full Stack
+
+tags_links:
+  - https://www.productplan.com/glossary/product-design/
+  - https://www.coursera.org/articles/software-engineer
+  - https://www.coursera.org/articles/full-stack-engineer
 ---
 
 <!-- <img

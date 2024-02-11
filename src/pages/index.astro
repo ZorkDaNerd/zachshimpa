@@ -35,9 +35,10 @@ const projects = (await getCollection('work'))
 					align="start"
 				>
 					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="planet" size="1.33em" /> Engineer</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Creator</Pill>
+						<a href="https://en.wikipedia.org/wiki/Edwin_Hubble" target="_blank" rel="noopener noreferrer"><Pill><Icon icon="planet" size="1.33em" />Astronomer</Pill></a>
+						<a href="https://en.wikipedia.org/wiki/Stephen_Hawking" target="_blank" rel="noopener noreferrer"><Pill><Icon icon="code" size="1.33em" />Philomath</Pill></a>
+						<a href="https://en.wikipedia.org/wiki/Albert_Einstein" target="_blank" rel="noopener noreferrer"><Pill><Icon icon="pencil-line" size="1.33em" />Creative</Pill></a>
+						<a href="https://terraria.fandom.com/wiki/Goblin_Tinkerer" target="_blank" rel="noopener noreferrer"><Pill><Icon icon="pencil-line" size="1.33em" />Tinkerer</Pill></a>
 					</div>
 				</Hero>
 
@@ -138,6 +139,10 @@ const projects = (await getCollection('work'))
 			margin-top: 0.5rem;
 			display: flex;
 			gap: 0.5rem;
+		}
+
+		.roles a {
+			text-decoration: none;
 		}
 
 		.hero img {
