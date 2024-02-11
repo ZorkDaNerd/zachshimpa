@@ -38,6 +38,12 @@ const { Content } = await entry.render();
 							<div class="tags">
 								{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
 							</div>
+							<div class="github_repo">
+								<a href={`${entry.data.github_repo}`} target="_blank" rel="noopener noreferrer">
+									<Icon icon="terminal-window" />
+									<span>View on GitHub</span>
+								</a>
+							</div>
 							<p class="description">{entry.data.description}</p>
 						</div>
 					</Hero>
