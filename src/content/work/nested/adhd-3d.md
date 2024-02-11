@@ -2,23 +2,31 @@
 title: Assisting people with ADHD navigating in VR
 publishDate: 2020-03-04 00:00:00
 img: /assets/work/adhd/adhd-environment.png
-img_alt: Image of the virtual environment the testing too place in.
+img_alt: Virtual environment the testing too place in.
+github_repo: https://github.com/csu-hci-projects/SP23-The-Effects-Of-Different-Navigation-Techniques-On-Distractability-of-ADHD-And-Non-ADHD-Individu
+
 description: |
   We developed a virtual showcase for the softest bedding imaginable.
+
 tags:
   - Virtual Reality
   - Navigation
   - Research
+
+tags_links:
+  - https://en.wikipedia.org/wiki/Virtual_reality
+  - https://www.toptal.com/designers/gui/game-ui
+  - https://en.wikipedia.org/wiki/Research
 ---
 
-<!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere commodo venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam non ligula vel metus efficitur hendrerit. In hac habitasse platea dictumst. Praesent et mauris ut mi dapibus semper. Curabitur tortor justo, efficitur sit amet pretium cursus, porta eget odio. Cras ac venenatis dolor. Donec laoreet posuere malesuada. Curabitur nec mi tempor, placerat leo sit amet, tincidunt est. Quisque pellentesque venenatis magna, eget tristique nibh pulvinar in. Vestibulum vitae volutpat arcu. Aenean ut malesuada odio, sit amet pellentesque odio. Suspendisse nunc elit, blandit nec hendrerit non, aliquet at magna. Donec id leo ut nulla sagittis sodales.
 
-Integer vitae nibh elit. Suspendisse eget urna eu neque bibendum pharetra. Sed interdum lectus sem, in pulvinar magna dignissim vel. Quisque maximus at urna nec laoreet. Suspendisse potenti. Vestibulum rhoncus sem ut mi pellentesque, in vestibulum erat blandit. Aliquam sodales dui ac maximus consectetur. Duis quis est vehicula, imperdiet nisl nec, fermentum erat. Duis tortor diam, pharetra eu euismod in, vehicula non eros. Curabitur facilisis dui at erat ultrices gravida. In at nunc ultricies, pulvinar mi vel, sagittis mauris. Praesent pharetra posuere purus ac imperdiet. Nulla facilisi.
-
-Sed pulvinar porttitor mi in ultricies. Etiam non dolor gravida eros pulvinar pellentesque et dictum ex. Proin eu ornare ligula, sed condimentum dui. Vivamus tincidunt tellus mi, sed semper ipsum pharetra a. Suspendisse sollicitudin at sapien nec volutpat. Etiam justo urna, laoreet ac lacus sed, ultricies facilisis dolor. Integer posuere, metus vel viverra gravida, risus elit ornare magna, id feugiat erat risus ullamcorper libero. Proin vitae diam auctor, laoreet lorem vitae, varius tellus.
-
-Mauris sed eros in ex maximus volutpat. Suspendisse potenti. Donec lacinia justo consectetur sagittis tempor. Proin ullamcorper nisi vitae auctor rhoncus. Sed tristique aliquam augue. Pellentesque vitae fringilla ligula. Nulla arcu elit, efficitur eu nunc malesuada, eleifend tincidunt orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer mattis orci in bibendum ultricies. Quisque a dui erat. Phasellus et vulputate ipsum. Proin metus ex, lobortis nec ornare eget, bibendum ut sapien. Aliquam in dolor lobortis, aliquam tellus a, congue augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum quis velit ac mollis. Suspendisse non purus fringilla, venenatis nisl porta, finibus odio. Curabitur aliquet metus faucibus libero interdum euismod. Morbi sed magna nisl. Morbi odio nibh, facilisis vel sapien eu, tempus tincidunt erat. Nullam erat velit, sagittis at purus quis, tristique scelerisque tortor. Pellentesque lacinia tortor id est aliquam viverra. Vestibulum et diam ac ipsum mollis fringilla. -->
-
-## WIP
+<!-- <img
+  src="/assets/work/adhd/adhd-environment.png"
+  width="1554"
+  height="882"
+  alt="Image of the virtual environment the testing too place in."
+> -->
+<P
+  style="font-size:20px;"
+> The repository 'SP23-The-Effects-Of-Different-Navigation-Techniques-On-Distractability-of-ADHD-And-Non-ADHD-Individual', is dedicated to our research on how different navigation techniques affect the distractibility of individuals with and without ADHD in a virtual reality (VR) environment. We have developed a virtual showcase for the test environment. The project aims to assist people with ADHD in navigating VR and to understand the impact of VR navigation techniques on their distractibility. The research areas covered in this project include Virtual Reality, Navigation, and ADHD.
+</p>
