@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.5.2",
+    "@astrojs/db": "^0.8.5",
     "astro": "^4.3.5",
     "astro-embed": "^0.6.1",
     "gh-pages": "^5.0.0",
