@@ -1,6 +1,7 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
 
+
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 import ContactCTA from "../../components/ContactCTA.astro";
@@ -25,6 +26,9 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+
+const currentPageSlug = entry.slug;
+const shouldShowGithubRepo = currentPageSlug !== 'scrum-website'; // Add the slug of the project that you don't want to show the github repo link for here
 ---
 
 <BaseLayout title={entry.data.title} description={entry.data.description}>
@@ -48,6 +52,7 @@ const { Content } = await entry.render();
                   ))
                 }
               </div>
+              {shouldShowGithubRepo && ( //Make the github repo link not show for the scrum-website project
               <div class="github_repo">
                 <a
                   href={`${entry.data.github_repo}`}
@@ -58,6 +63,7 @@ const { Content } = await entry.render();
                   <Pill>View on GitHub</Pill>
                 </a>
               </div>
+              )}
               <p class="description">{entry.data.description}</p>
             </div>
           </Hero>
