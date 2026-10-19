@@ -12,14 +12,22 @@ This is the source code for my personal website. Here, you can learn more about 
 - Blog: Read some of my thoughts on various topics.
 - Contact: Find out how to get in touch with me.
 
-## Installation
+## Getting Started
 
-To run the website locally:
+Requires Node.js 22.12.0 or newer. The tested version is pinned in `.nvmrc`.
 
-1. Clone the repository
-2. `cd` into the repository
-3. Run `npm install` to install dependencies
-4. Run `npm start` to start the local server
+```sh
+git clone https://github.com/ZorkDaNerd/zachshimpa.git
+cd zachshimpa
+nvm install
+nvm use
+npm ci
+npm run dev
+```
+
+If you do not use nvm, install Node.js 24.22.0 before installing dependencies. The dev server is available at `http://localhost:4321`.
+
+To create a production build, run `npm run build`. The generated site is written to `dist/`.
 
 ## Contributing
 
