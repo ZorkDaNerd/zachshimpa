@@ -11,8 +11,8 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "astro": "6.4",
+    "@astrojs/check": "^0.9.11",
+    "astro": "^7.4.1",
     "astro-embed": "^0.14.0",
     "gh-pages": "^6.1.1",
     "typescript": "^5.8.3"
