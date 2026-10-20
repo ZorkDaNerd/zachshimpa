@@ -2,6 +2,9 @@
   "name": "zachshimpa",
   "type": "module",
   "version": "0.1.3",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -11,12 +14,10 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "astro": "^5.12.3",
-    "astro-embed": "^0.9.0",
-    "gh-pages": "^6.3.0",
-    "node": "^23.11.0",
-    "npm": "^10.9.2",
+    "@astrojs/check": "^0.9.11",
+    "astro": "^7.4.1",
+    "astro-embed": "^0.14.0",
+    "gh-pages": "^6.1.1",
     "typescript": "^5.8.3"
   }
 }
